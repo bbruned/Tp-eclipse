@@ -1,0 +1,40 @@
+<object-stream>
+  <diagram nodeName="ClassDiagramRoot" width="-1" height="-1" x="0" y="0" connectionRouter="0" rulersEnabled="true" snapToGeometry="true" snapToGrid="true" gridEnabled="true" zoom="1.0" javaProjectName="tpeclipse">
+    <children>
+      <package nodeName="" width="-1" height="-1" x="0" y="0" linked="true" referenced="false">
+        <children>
+          <entity nodeName="main" width="-1" height="-1" x="0" y="0" visibility="1" abstract="false" inner="false" final="false" static="false" type="1" linked="true" referenced="false">
+            <children>
+              <method nodeName="main(String[])" type="void" name="main" static="true" final="false" abstract="false" visibility="1">
+                <parameters>
+                  <methodParameter type="String[]" name="args" final="false"/>
+                </parameters>
+              </method>
+            </children>
+            <depends>
+              <no-comparator/>
+              <string>java.io.PrintStream</string>
+              <string>java.lang.String</string>
+              <string>java.lang.System</string>
+            </depends>
+          </entity>
+        </children>
+      </package>
+    </children>
+    <leftRuler unit="2" horizontal="false"/>
+    <topRuler unit="2" horizontal="true"/>
+    <wires>
+      <no-comparator/>
+    </wires>
+    <MemberVisibility association="true" depends="true" extends="true" implements="true" note="true" fieldDefault="true" fieldPrivate="true" fieldProtected="true" fieldPublic="true" innerDefault="true" innerPrivate="true" innerProtected="true" innerPublic="true" methodDefault="true" methodPrivate="true" methodProtected="true" methodPublic="true"/>
+    <IncludedPackages>
+      <string>tpeclipse</string>
+    </IncludedPackages>
+    <ExcludedReferences>
+      <string>java.</string>
+      <string>javax.</string>
+      <string>com.sun.</string>
+      <string>org.eclipse.</string>
+    </ExcludedReferences>
+  </diagram>
+</object-stream>
