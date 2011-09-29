@@ -7,10 +7,13 @@ public class main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println("Hello world");
-		Point p1= new Point(0,0); 
-        Point p2= new Point(1,2);
-        System.out.println(p1.toString()+p2.toString());
-        		
+		ImageTraitement lena = new ImageTraitement("./lena512x512.pgm");
+		lena.show();
+		lena.histogramme().show();
+		ImageTraitement peppers = new ImageTraitement("./peppers512x512.pgm");
+		peppers.show();	
+		lena.binaire(100).show();
+		lena.difference(peppers).histogramme().show();
 	}
 	
 }
