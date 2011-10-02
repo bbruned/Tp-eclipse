@@ -1,0 +1,223 @@
+<object-stream>
+  <diagram nodeName="ClassDiagramRoot" width="-1" height="-1" x="0" y="0" connectionRouter="0" rulersEnabled="true" snapToGeometry="true" snapToGrid="true" gridEnabled="true" zoom="1.0" javaProjectName="tpeclipse">
+    <children>
+      <package nodeName="" width="-1" height="-1" x="0" y="0" linked="true" referenced="false">
+        <children>
+          <entity nodeName="main" width="-1" height="-1" x="0" y="0" visibility="1" abstract="false" inner="false" final="false" static="false" type="1" linked="true" referenced="false">
+            <children>
+              <method nodeName="main(String[])" type="void" name="main" static="true" final="false" abstract="false" visibility="1">
+                <parameters>
+                  <methodParameter type="String[]" name="args" final="false"/>
+                </parameters>
+              </method>
+            </children>
+            <depends>
+              <no-comparator/>
+              <string>ImageTraitement</string>
+              <string>java.io.PrintStream</string>
+              <string>java.lang.String</string>
+              <string>java.lang.System</string>
+            </depends>
+          </entity>
+          <entity nodeName="ImageTraitement" width="-1" height="-1" x="20" y="20" visibility="1" abstract="false" inner="false" final="false" static="false" type="1" linked="true" referenced="false">
+            <children>
+              <field nodeName="_image" type="ImagePlus" name="_image" static="false" final="false" visibility="4"/>
+              <method nodeName="ImageTraitement(int,int)" type="void" name="ImageTraitement" static="false" final="false" abstract="false" visibility="1">
+                <parameters>
+                  <methodParameter type="int" name="w" final="false"/>
+                  <methodParameter type="int" name="h" final="false"/>
+                </parameters>
+              </method>
+              <method nodeName="ImageTraitement(String)" type="void" name="ImageTraitement" static="false" final="false" abstract="false" visibility="1">
+                <parameters>
+                  <methodParameter type="String" name="path" final="false"/>
+                </parameters>
+              </method>
+              <method nodeName="getWidth()" type="int" name="getWidth" static="false" final="false" abstract="false" visibility="1"/>
+              <method nodeName="getHeight()" type="int" name="getHeight" static="false" final="false" abstract="false" visibility="1"/>
+              <method nodeName="getImageProcessor()" type="ImageProcessor" name="getImageProcessor" static="false" final="false" abstract="false" visibility="4"/>
+              <method nodeName="setPixel(int,int,int)" type="void" name="setPixel" static="false" final="false" abstract="false" visibility="1">
+                <parameters>
+                  <methodParameter type="int" name="x" final="false"/>
+                  <methodParameter type="int" name="y" final="false"/>
+                  <methodParameter type="int" name="value" final="false"/>
+                </parameters>
+              </method>
+              <method nodeName="getPixel(int,int)" type="int[]" name="getPixel" static="false" final="false" abstract="false" visibility="1">
+                <parameters>
+                  <methodParameter type="int" name="x" final="false"/>
+                  <methodParameter type="int" name="y" final="false"/>
+                </parameters>
+              </method>
+              <method nodeName="saveAsPng(String)" type="void" name="saveAsPng" static="false" final="false" abstract="false" visibility="1">
+                <parameters>
+                  <methodParameter type="String" name="fileName" final="false"/>
+                </parameters>
+              </method>
+              <method nodeName="show()" type="void" name="show" static="false" final="false" abstract="false" visibility="1"/>
+              <method nodeName="gris()" type="ImageTraitement" name="gris" static="false" final="false" abstract="false" visibility="1"/>
+              <method nodeName="binaire(int)" type="ImageTraitement" name="binaire" static="false" final="false" abstract="false" visibility="1">
+                <parameters>
+                  <methodParameter type="int" name="seuil" final="false"/>
+                </parameters>
+              </method>
+              <method nodeName="histogramme()" type="ImageTraitement" name="histogramme" static="false" final="false" abstract="false" visibility="1"/>
+              <method nodeName="difference(ImageTraitement)" type="ImageTraitement" name="difference" static="false" final="false" abstract="false" visibility="1">
+                <parameters>
+                  <methodParameter type="ImageTraitement" name="image" final="false"/>
+                </parameters>
+              </method>
+            </children>
+            <attribute>
+              <no-comparator/>
+              <string>ij.ImagePlus</string>
+            </attribute>
+            <depends>
+              <no-comparator/>
+              <string>ij.ImagePlus</string>
+              <string>ij.gui.NewImage</string>
+              <string>ij.io.FileSaver</string>
+              <string>ij.process.ImageProcessor</string>
+              <string>java.awt.Color</string>
+              <string>java.lang.Integer</string>
+              <string>java.lang.Math</string>
+              <string>java.lang.Object</string>
+              <string>java.lang.String</string>
+              <string>java.util.Vector</string>
+            </depends>
+          </entity>
+        </children>
+      </package>
+      <package nodeName="ij" width="-1" height="-1" x="10" y="10" linked="false" referenced="true">
+        <children>
+          <entity nodeName="ij.ImagePlus" width="-1" height="-1" x="10" y="10" visibility="1" abstract="false" inner="false" final="false" static="false" type="1" linked="false" referenced="true"/>
+        </children>
+      </package>
+      <package nodeName="ij.gui" width="-1" height="-1" x="10" y="10" linked="false" referenced="true">
+        <children>
+          <entity nodeName="ij.gui.NewImage" width="-1" height="-1" x="10" y="10" visibility="1" abstract="false" inner="false" final="false" static="false" type="1" linked="false" referenced="true"/>
+        </children>
+      </package>
+      <package nodeName="ij.io" width="-1" height="-1" x="10" y="10" linked="false" referenced="true">
+        <children>
+          <entity nodeName="ij.io.FileSaver" width="-1" height="-1" x="10" y="10" visibility="1" abstract="false" inner="false" final="false" static="false" type="1" linked="false" referenced="true"/>
+        </children>
+      </package>
+      <package nodeName="ij.process" width="-1" height="-1" x="10" y="10" linked="false" referenced="true">
+        <children>
+          <entity nodeName="ij.process.ImageProcessor" width="-1" height="-1" x="10" y="10" visibility="1" abstract="true" inner="false" final="false" static="false" type="1" linked="false" referenced="true"/>
+        </children>
+      </package>
+    </children>
+    <leftRuler unit="2" horizontal="false"/>
+    <topRuler unit="2" horizontal="true"/>
+    <wires>
+      <no-comparator/>
+      <entry>
+        <string>Wire0</string>
+        <wire nodeName="Wire0" type="3">
+          <source reference="../../../../children/package/children/entity[2]"/>
+          <sourceAnchor>
+            <selected preciseX="0.5" preciseY="0.5" x="0" y="0"/>
+            <reference x="25" y="25"/>
+            <location x="20" y="20"/>
+            <box x="20" y="20" width="10" height="10"/>
+          </sourceAnchor>
+          <target reference="../../../../children/package[2]/children/entity"/>
+          <targetAnchor>
+            <selected preciseX="0.5" preciseY="0.5" x="0" y="0"/>
+            <reference x="15" y="15"/>
+            <location x="20" y="20"/>
+            <box x="10" y="10" width="10" height="10"/>
+          </targetAnchor>
+        </wire>
+      </entry>
+      <entry>
+        <string>Wire1</string>
+        <wire nodeName="Wire1" type="4">
+          <source reference="../../../../children/package/children/entity[2]"/>
+          <sourceAnchor>
+            <selected preciseX="0.5" preciseY="0.5" x="0" y="0"/>
+            <reference x="25" y="25"/>
+            <location x="20" y="20"/>
+            <box x="20" y="20" width="10" height="10"/>
+          </sourceAnchor>
+          <target reference="../../../../children/package[3]/children/entity"/>
+          <targetAnchor>
+            <selected preciseX="0.5" preciseY="0.5" x="0" y="0"/>
+            <reference x="15" y="15"/>
+            <location x="20" y="20"/>
+            <box x="10" y="10" width="10" height="10"/>
+          </targetAnchor>
+        </wire>
+      </entry>
+      <entry>
+        <string>Wire2</string>
+        <wire nodeName="Wire2" type="4">
+          <source reference="../../../../children/package/children/entity[2]"/>
+          <sourceAnchor>
+            <selected preciseX="0.5" preciseY="0.5" x="0" y="0"/>
+            <reference x="25" y="25"/>
+            <location x="20" y="20"/>
+            <box x="20" y="20" width="10" height="10"/>
+          </sourceAnchor>
+          <target reference="../../../../children/package[4]/children/entity"/>
+          <targetAnchor>
+            <selected preciseX="0.5" preciseY="0.5" x="0" y="0"/>
+            <reference x="15" y="15"/>
+            <location x="20" y="20"/>
+            <box x="10" y="10" width="10" height="10"/>
+          </targetAnchor>
+        </wire>
+      </entry>
+      <entry>
+        <string>Wire3</string>
+        <wire nodeName="Wire3" type="4">
+          <source reference="../../../../children/package/children/entity[2]"/>
+          <sourceAnchor>
+            <selected preciseX="0.5" preciseY="0.5" x="0" y="0"/>
+            <reference x="25" y="25"/>
+            <location x="20" y="20"/>
+            <box x="20" y="20" width="10" height="10"/>
+          </sourceAnchor>
+          <target reference="../../../../children/package[5]/children/entity"/>
+          <targetAnchor>
+            <selected preciseX="0.5" preciseY="0.5" x="0" y="0"/>
+            <reference x="15" y="15"/>
+            <location x="20" y="20"/>
+            <box x="10" y="10" width="10" height="10"/>
+          </targetAnchor>
+        </wire>
+      </entry>
+      <entry>
+        <string>Wire4</string>
+        <wire nodeName="Wire4" type="4">
+          <source reference="../../../../children/package/children/entity"/>
+          <sourceAnchor>
+            <selected preciseX="0.5" preciseY="0.5" x="0" y="0"/>
+            <reference x="5" y="5"/>
+            <location x="10" y="10"/>
+            <box x="0" y="0" width="10" height="10"/>
+          </sourceAnchor>
+          <target reference="../../../../children/package/children/entity[2]"/>
+          <targetAnchor>
+            <selected preciseX="0.5" preciseY="0.5" x="0" y="0"/>
+            <reference x="25" y="25"/>
+            <location x="20" y="20"/>
+            <box x="20" y="20" width="10" height="10"/>
+          </targetAnchor>
+        </wire>
+      </entry>
+    </wires>
+    <MemberVisibility association="true" depends="true" extends="true" implements="true" note="true" fieldDefault="true" fieldPrivate="true" fieldProtected="true" fieldPublic="true" innerDefault="true" innerPrivate="true" innerProtected="true" innerPublic="true" methodDefault="true" methodPrivate="true" methodProtected="true" methodPublic="true"/>
+    <IncludedPackages>
+      <string>src</string>
+    </IncludedPackages>
+    <ExcludedReferences>
+      <string>java.</string>
+      <string>javax.</string>
+      <string>com.sun.</string>
+      <string>org.eclipse.</string>
+    </ExcludedReferences>
+  </diagram>
+</object-stream>
